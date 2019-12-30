@@ -18,7 +18,7 @@ public class Application {
 		ConfigurableApplicationContext run = SpringApplication.run(Application.class, args);		
 		CsvFileProcessor logFileProcessor = run.getBean(CsvFileProcessor.class);
 		Instant start = Instant.now();	
-		logFileProcessor.processFile("E:\\Niraj\\git-checkout-java\\rxjava2-csvprocessor\\src\\main\\resources\\sample-data.csv");		
+		logFileProcessor.processFile(System.getProperty("user.dir") + "/src/main/resources/sample-data.csv");
 		
 		Instant end = Instant.now();		
 		
